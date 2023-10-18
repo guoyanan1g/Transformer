@@ -14,7 +14,7 @@ class FeedForwardLayer(nn.Module): #前馈全连接层
     def forward(self,x):
         return self.l2(self.dropout(relu(self.l1(x))))
 
-class NormLayer(nn.Module): #规范户层
+class NormLayer(nn.Module): #规范层
     def __init__(self,dim):
         super(NormLayer,self).__init__()
         self.n1=nn.Parameter(torch.ones(dim))
